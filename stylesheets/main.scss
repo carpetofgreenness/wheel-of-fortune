@@ -1,0 +1,27 @@
+@import 'bourbon/bourbon';
+@import 'scut';
+
+
+$default-blue: #0E0EFF;
+
+body {     background-color:$default-blue;   }  
+
+.letter {
+  background-color: white;
+  border: 1px solid black;
+}
+
+.space {
+  background-color: transparent;
+}
+
+.slot {
+  height: 70px;
+  width: 50px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px;
+  @include scut-vcenter-lh(70px);
+  text-align: center;
+  font-size: 3rem;
+}
