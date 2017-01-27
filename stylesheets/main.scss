@@ -1,5 +1,6 @@
 @import 'bourbon/bourbon';
 @import 'scut';
+@import 'neat/neat-helpers';
 
 
 $default-blue: #0E0EFF;
@@ -25,3 +26,16 @@ body {     background-color:$default-blue;   }
   text-align: center;
   font-size: 3rem;
 }
+
+.letter {
+  height: 50px;
+  width: 40px;
+  display: inline-block;
+  @include scut-vcenter-lh(50px);
+  text-align: center;
+  font-size: 2em;
+}
+
+// div.container {
+//   @include outer-container;
+// }
