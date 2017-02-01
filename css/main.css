@@ -4,9 +4,6 @@
 * v1.4.0
 * Docs at http://davidtheclark.github.io/scut
 */
-body {
-  background-color: #0E0EFF; }
-
 .letter {
   background-color: white;
   border: 1px solid black; }
@@ -15,23 +12,85 @@ body {
   background-color: transparent; }
 
 .slot {
-  height: 70px;
-  width: 50px;
   display: inline-block;
   vertical-align: top;
-  margin: 10px;
-  height: 70px;
-  line-height: 70px;
+  margin: 2px;
   text-align: center;
-  font-size: 3rem; }
+  border-radius: 10px; }
+  @media screen and (max-width: 730px) {
+    .slot {
+      width: 32px;
+      height: 32px;
+      font-size: 1.5rem;
+      height: 32px;
+      line-height: 32px; } }
+  @media screen and (min-width: 730px) {
+    .slot {
+      height: 50px;
+      width: 40px;
+      font-size: 2rem;
+      height: 50px;
+      line-height: 50px; } }
 
 .letter {
-  height: 50px;
-  width: 40px;
   display: inline-block;
-  height: 50px;
-  line-height: 50px;
   text-align: center;
+  border-radius: 10px;
+  margin: 2px; }
+  @media screen and (max-width: 730px) {
+    .letter {
+      width: 32px;
+      height: 32px;
+      font-size: 1.5rem;
+      height: 32px;
+      line-height: 32px; } }
+  @media screen and (min-width: 730px) {
+    .letter {
+      height: 50px;
+      width: 40px;
+      font-size: 2rem;
+      height: 50px;
+      line-height: 50px; } }
+
+.player {
+  border: 1px solid black;
+  margin: 1em;
+  border-radius: 10px; }
+
+.word {
+  display: inline-block; }
+
+.active {
+  border: 5px solid red;
+  border-color: red;
+  box-shadow: 0 0 10px red; }
+
+.btn {
+  margin: 5px;
+  font-size: 2rem; }
+  @media screen and (max-width: 730px) {
+    .btn {
+      font-size: 1em; } }
+
+.btn2 {
+  visibility: hidden; }
+
+.well {
+  display: none; }
+
+input[type="text"] {
   font-size: 2em; }
+
+@media screen and (max-width: 730px) {
+  h1 {
+    font-size: 1.5em; } }
+
+@media screen and (max-width: 730px) {
+  h2 {
+    font-size: 1em; } }
+
+@media screen and (max-width: 730px) {
+  h3 {
+    font-size: 1em; } }
 
 /*# sourceMappingURL=main.css.map */

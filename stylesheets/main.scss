@@ -2,10 +2,7 @@
 @import 'scut';
 @import 'neat/neat-helpers';
 
-
-$default-blue: #0E0EFF;
-
-body {     background-color:$default-blue;   }  
+$break-small: 730px;
 
 .letter {
   background-color: white;
@@ -17,25 +14,105 @@ body {     background-color:$default-blue;   }
 }
 
 .slot {
-  height: 70px;
-  width: 50px;
   display: inline-block;
   vertical-align: top;
-  margin: 10px;
-  @include scut-vcenter-lh(70px);
+  margin: 2px;
+  
   text-align: center;
-  font-size: 3rem;
+
+  border-radius: 10px;
+    @media screen and (max-width: $break-small) {
+      width: 32px;
+      height: 32px;
+      font-size: 1.5rem;
+      @include scut-vcenter-lh(32px);
+    }
+    @media screen and (min-width: $break-small) {
+      height: 50px;
+      width: 40px;
+      font-size: 2rem;
+      @include scut-vcenter-lh(50px);
+    }
 }
 
 .letter {
-  height: 50px;
-  width: 40px;
+  // height: 50px;
+  // width: 40px;
   display: inline-block;
-  @include scut-vcenter-lh(50px);
   text-align: center;
-  font-size: 2em;
+  border-radius: 10px;
+  margin: 2px;
+  @media screen and (max-width: $break-small) {
+    width: 32px;
+    height: 32px;
+    font-size: 1.5rem;
+    @include scut-vcenter-lh(32px);
+  }
+  @media screen and (min-width: $break-small) {
+    height: 50px;
+    width: 40px;
+    font-size: 2rem;
+    @include scut-vcenter-lh(50px);
+  }
 }
 
 // div.container {
 //   @include outer-container;
 // }
+
+.player {
+  // display: inline-block;
+  border: 1px solid black;
+  // width: 45%;
+  margin: 1em;
+  border-radius: 10px;
+  // height: 9em;
+}
+
+.word {
+  display: inline-block;
+}
+
+.active {
+  border: 5px solid red;
+  border-color: red;
+  box-shadow: 0 0 10px red;
+}
+
+.btn {
+  margin: 5px;
+  font-size: 2rem;
+  @media screen and (max-width: $break-small) {
+      font-size: 1em;
+  }
+}
+
+.btn2 {
+  visibility: hidden;
+}
+
+.well {
+  display: none;
+}
+
+input[type="text"] {
+  font-size: 2em;
+}
+
+h1 {
+    @media screen and (max-width: $break-small) {
+      font-size: 1.5em;
+  }
+}
+
+h2 {
+    @media screen and (max-width: $break-small) {
+      font-size: 1em;
+  }
+}
+
+h3 {
+    @media screen and (max-width: $break-small) {
+      font-size: 1em;
+  }
+}
