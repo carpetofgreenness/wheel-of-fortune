@@ -63,18 +63,20 @@ function Game(quoteArray) {
 
 	this.playLetter = function(letter,game) {
 		// this.optionsArray.splice(this.optionsArray.indexOf(letter),1);
-		
+		// console.log(this.answerArrayLC)
 		if (this.answerArrayLC.includes(letter)) {
 			var indices = []
 			var idx = this.answerArrayLC.indexOf(letter);
 			
 			while (idx != -1) { //when indexOf gets nothing, returns -1
 			  indices.push(idx); //add idx to the index list
-			  idx = this.answerArray.indexOf(letter, idx + 1); //go to the next index. will get -1 if this was the last
+			  idx = this.answerArrayLC.indexOf(letter, idx + 1); //go to the next index. will get -1 if this was the last
 			}
 
+			// console.log(indices)
+
 			for (var i=0; i<indices.length; i++) {
-				this.playerArray[indices[i]] = this.answerArray[indices[i]]
+				this.playerArray[indices[i]] = this.answerArrayLC[indices[i]]
 				this.gameboard.update(indices[i])
 			}
 			this.playRound(indices.length*10)
@@ -91,8 +93,8 @@ function Game(quoteArray) {
 		if (guessString.toLowerCase().replace(/[^a-zA-Z ]/g, "") == gameString.toLowerCase().replace(/[^a-zA-Z ]/g, "")) {
 			alert("correct!")
 			this.playRound(50);
-			for (var i=0; i<this.answerArray.length; i++) {
-				this.playerArray[i] = this.answerArray[i]
+			for (var i=0; i<this.answerArrayLC.length; i++) {
+				this.playerArray[i] = this.answerArrayLC[i]
 				this.gameboard.update(i)
 			}
 		}
@@ -227,7 +229,7 @@ $("form").submit(function (e) {
 });
 
 $(".btn-danger").click(function(){
-	$(".well").show();
+	$(".solve-well").show();
 	document.getElementById("guessInput").focus();
 })
 
